@@ -1,0 +1,60 @@
+{#<!DOCTYPE html>#}
+{#<html lang="zh">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>添加用户</title>#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/add_user.css') }}">#}
+{#</head>#}
+{#<body>#}
+{#<div class="container">#}
+{#    <!-- 按钮选择 -->#}
+    <div class="button-group">
+        <button type="button" id="add-user-btn">增加用户</button>
+        <button type="button" id="add-admin-btn">增加管理员</button>
+    </div>
+
+    <form id="add-user-form">
+        <!-- Email 输入框 -->
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+
+        <!-- 用户名 输入框 -->
+        <div class="input-group">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" required />
+        </div>
+
+        <!-- 密码 输入框 -->
+        <div class="input-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" required />
+        </div>
+
+        <!-- 是否超级管理员 输入框 -->
+        <div class="input-group" id="issuper-group" style="display: none;">
+            <label for="issuper">是否超级管理员 (0 或 1)</label>
+            <input type="number" id="issuper" name="issuper" min="0" max="1" required />
+        </div>
+
+        <!-- 权限选择框，超级管理员不需要权限 -->
+        <div class="input-group" id="permission-selector-container" style="display: none;">
+            <label for="permissions">权限</label>
+            <select id="permissions" name="permission">
+                <option value="0">图书</option>
+                <option value="1">设备</option>
+                <option value="2">耗材</option>
+            </select>
+        </div>
+
+        <button type="button" id="submit">添加用户</button>
+    </form>
+{#</div>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/api.js') }}"></script>#}
+{#<script src="{{ url_for('static', filename='js/admin_func/add_user.js') }}"></script>#}
+{#<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>#}
+{#</body>#}
+{#</html>#}

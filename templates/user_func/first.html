@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物资管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_func/first.css') }}">
+</head>
+<body>
+   <div class="wrapper">
+        <div class="navbar">
+            <button class="page-button" data-page="first">实验物资</button>
+            <button class="page-button" data-page="pending_returns">待归还物品</button>
+            <button class="page-button" data-page="approval_status">审批进度</button>
+            <button class="page-button" data-page="history_requests">历史借用记录</button>
+        </div>
+        <div class="container">
+            <select id="privilege-select">
+                <option value="图书">图书</option>
+                <option value="设备">设备</option>
+                <option value="耗材">耗材</option>
+            </select>
+
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="请输入关键词搜索">
+                <button id="searchButton">搜索</button>
+            </div>
+
+            <div id="item-list" class="item-list"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static',filename='js/api.js' )}}"></script>
+    <script src="{{ url_for('static', filename='js/user_func/first.js') }}"></script>
+</body>
+</html>

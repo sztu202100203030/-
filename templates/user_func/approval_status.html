@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>审批进度</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_func/approval_status.css') }}">
+</head>
+<body>
+   <div class="wrapper">
+        <!-- 导航栏 -->
+        <div class="navbar">
+            <button class="page-button" data-page="first">实验物资</button>
+            <button class="page-button" data-page="pending_returns">待归还物品</button>
+            <button class="page-button" data-page="approval_status">审批进度</button>
+            <button class="page-button" data-page="history_requests">历史借用记录</button>
+        </div>
+
+        <!-- 页面主体内容 -->
+        <div class="content">
+            <div id="approval-status-list">
+                <!-- 动态生成审批进度 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/user_func/approval_status.js') }}"></script>
+</body>
+</html>

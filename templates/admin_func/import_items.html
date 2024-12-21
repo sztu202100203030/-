@@ -1,0 +1,29 @@
+{#<!DOCTYPE html>#}
+{#<html lang="zh">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>批量导入物资</title>#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/import_items.css') }}">#}
+{#</head>#}
+{#<body>#}
+{#<div class="container">#}
+    <div id="privilege-selector-container-import">
+        <label for="privilege-selector-import">当前选择:</label>
+        <select id="privilege-selector-import">
+            <option value="图书">图书</option>
+            <option value="设备">设备</option>
+            <option value="耗材">耗材</option>
+        </select>
+    </div>
+    <button id="choose-file-button-import">选择文件</button>
+    <input type="file" id="file-input" style="display:none;" />
+    <div id="file-info"></div>
+    <button id="upload-button" style="display:none;">上传文件</button>
+{#</div>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/api.js') }}"></script>#}
+{#<script src="{{ url_for('static', filename='js/admin_func/import_items.js') }}"></script>#}
+{#<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>#}
+{#</body>#}
+{#</html>#}

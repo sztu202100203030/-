@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员页面</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/admin.css') }}">
+</head>
+<body>
+   <div class="wrapper">
+       <div class="navbar">
+            <!-- 处理借出出库 -->
+            <button class="page-button" data-toggle="out-management">处理借出出库</button>
+            <div class="submenu" id="out-management" style="display: none;">
+                <button class="submenu-button" data-url="/pending_requests">待处理借出预约请求</button>
+                <button class="submenu-button" data-url="/processed_requests">已处理借出预约请求</button>
+                <button class="submenu-button" data-url="/pending_exchanges">待交接出库请求</button>
+            </div>
+
+            <!-- 处理归还入库 -->
+            <button class="page-button" data-toggle="in-management">处理归还入库</button>
+            <div class="submenu" id="in-management" style="display: none;">
+                <button class="submenu-button" data-url="/admin_pending_returns">待处理归还预约请求</button>
+                <button class="submenu-button" data-url="/processed_returns">已处理归还预约请求</button>
+                <button class="submenu-button" data-url="/return_exchanges">待交接入库请求</button>
+            </div>
+
+            <!-- 物资更改 -->
+            <button class="page-button" data-toggle="item-management">物资更改</button>
+            <div class="submenu" id="item-management" style="display: none;">
+                <button class="submenu-button" data-url="/delete_items">删除物资</button>
+                <button class="submenu-button" data-url="/add_item">新增物资</button>
+                <button class="submenu-button" data-url="/import_items">导入物资</button>
+            </div>
+
+            <!-- 查询记录 (直接跳转) -->
+            <button class="page-button" data-url="/query_records">查询记录</button>
+
+            <!-- 线下交接 (直接跳转) -->
+            <button class="page-button" data-url="/offline_handover">线下交接</button>
+
+            <button class="page-button" data-url="/add_user">增加用户</button>
+        </div>
+
+        <!-- 主要内容区，用于加载不同页面 -->
+        <main class="content" id="content-area">
+            <h1>欢迎来到管理员页面</h1>
+            <p>请选择左侧菜单以加载内容。</p>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static',filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/admin_func/admin.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+</body>
+</html>
+
+
+
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/pending_requests.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/processed_requests.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/pending_exchanges.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/admin_pending_returns.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/processed_returns.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/return_exchanges.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/delete_items.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/add_item.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/import_items.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/query_records.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/offline_handover.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/offline_handover_detail.css') }}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/add_user.css') }}">#}

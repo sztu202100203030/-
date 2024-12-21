@@ -1,0 +1,92 @@
+/*!* 通用样式 *!*/
+/*body {*/
+/*    font-family: 'Arial', sans-serif;*/
+/*    background-color: #f4f4f9;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.content {*/
+/*    flex: 1; !* 让内容区域扩展以填充剩余空间 *!*/
+/*    max-width: 800px;*/
+/*    margin: 2rem auto;*/
+/*    padding: 20px;*/
+/*    background: #fff;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/* 搜索条样式 */
+.search-bar {
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 在主轴上均匀分配子元素的空间 */
+    margin-bottom: 20px; /* 搜索条底部外边距 */
+}
+
+#email-input {
+    flex: 1; /* 输入框占据剩余空间 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 圆角边框 */
+    font-size: 16px; /* 字体大小 */
+}
+
+#search-button {
+    padding: 10px 15px; /* 内边距 */
+    background-color: #007bff; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 4px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标悬停显示为手型 */
+    transition: background-color 0.3s; /* 背景色变化的过渡效果 */
+}
+
+#search-button:hover {
+    background-color: #0056b3; /* 鼠标悬停时的背景色变化 */
+}
+
+/* 记录样式 */
+.records {
+    margin-top: 40px; /* 顶部外边距 */
+}
+
+.record {
+    background: #f9f9f9; /* 记录背景色 */
+    border: 1px solid #e0e0e0; /* 记录边框样式 */
+    border-radius: 5px; /* 圆角边框 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 15px; /* 底部外边距 */
+    transition: transform 0.2s; /* 变换的过渡效果 */
+}
+
+.record:hover {
+    transform: scale(1.01); /* 鼠标悬停时稍微放大 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.record p {
+    margin: 5px 0; /* 段落外边距 */
+    font-size: 14px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+}
+
+/* 状态颜色 */
+.record p[data-status="预约被拒绝"] {
+    color: #dc3545; /* 红色，表示预约被拒绝 */
+}
+
+.record p[data-status="待交接"] {
+    color: #ffc107; /* 黄色，表示待交接状态 */
+}
+
+.record p[data-status="待归还"] {
+    color: #007bff; /* 蓝色，表示待归还状态 */
+}
+
+.record p[data-status="部分归还"] {
+    color: #17a2b8; /* 青色，表示部分归还状态 */
+}
+
+.record p[data-status="已归还"] {
+    color: #28a745; /* 绿色，表示已归还状态 */
+}

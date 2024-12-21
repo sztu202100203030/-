@@ -1,0 +1,84 @@
+/*!* 页面容器样式 *!*/
+/*.container {*/
+/*    max-width: 80%; !* 改为80%宽度 *!*/
+/*    margin: 40px auto; !* 保持居中 *!*/
+/*    padding: 20px; !* 内边距 *!*/
+/*    background-color: #ffffff; !* 背景颜色 *!*/
+/*    border-radius: 8px; !* 圆角 *!*/
+/*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); !* 阴影效果 *!*/
+/*}*/
+
+/* 按钮组样式 */
+.button-group {
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 按钮两端对齐 */
+    margin-bottom: 20px; /* 按钮组与表单之间的间距 */
+}
+
+/* 按钮样式 */
+.button-group button {
+    background-color: #3498DB; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 10px 20px; /* 内边距 */
+    border-radius: 5px; /* 圆角按钮 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    transition: background-color 0.3s, transform 0.2s; /* 背景色和变换的过渡效果 */
+    flex: 1; /* 按钮占据相同的宽度 */
+    margin-right: 10px; /* 右边间距 */
+}
+
+.button-group button:last-child {
+    margin-right: 0; /* 最后一个按钮去掉右边间距 */
+}
+
+.button-group button:hover {
+    background-color: #2980B9; /* 鼠标悬停时的背景色 */
+    transform: scale(1.05); /* 鼠标悬停时放大按钮 */
+}
+
+/* 输入框组样式 */
+.input-group {
+    margin-bottom: 15px; /* 输入框之间的间距 */
+}
+
+/* 输入框样式 */
+.input-group label {
+    display: block; /* 标签块级显示 */
+    margin-bottom: 5px; /* 标签与输入框之间的间距 */
+    font-weight: bold; /* 加粗字体 */
+}
+
+.input-group input, .input-group select {
+    width: 100%; /* 宽度100% */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 4px; /* 圆角 */
+    transition: border-color 0.3s; /* 边框颜色的过渡效果 */
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #3498DB; /* 聚焦时边框颜色 */
+    outline: none; /* 去掉默认的聚焦轮廓 */
+}
+
+/* 提交按钮样式 */
+#submit {
+    background-color: #2ECC71; /* 提交按钮背景色 */
+    color: white; /* 提交按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 10px 20px; /* 内边距 */
+    border-radius: 5px; /* 圆角按钮 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    transition: background-color 0.3s, transform 0.2s; /* 背景色和变换的过渡效果 */
+}
+
+#submit:hover {
+    background-color: #27AE60; /* 鼠标悬停时的背景色 */
+    transform: scale(1.05); /* 鼠标悬停时放大按钮 */
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%; /* 在小屏幕上占满宽度 */
+    }
+}

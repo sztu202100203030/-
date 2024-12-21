@@ -1,0 +1,25 @@
+{#<!DOCTYPE html>#}
+{#<html lang="zh-CN">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>物资归还入库</title>#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/return_exchanges.css') }}">#}
+{#</head>#}
+{#<body>#}
+{#    <div class="container">#}
+        <select id="privilege-selector" style="display: none;">
+            <option value="图书">图书</option>
+            <option value="设备">设备</option>
+            <option value="耗材">耗材</option>
+        </select>
+        <div id="current-privilege">当前选择: <span id="selected-privilege">图书</span></div>
+
+        <div id="pending-returns"></div>
+{#    </div>#}
+{##}
+{#    <script src="{{ url_for('static', filename='js/api.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='js/admin_func/return_exchanges.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>#}
+{#</body>#}
+{#</html>#}

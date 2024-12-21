@@ -1,0 +1,62 @@
+
+/* 请求列表样式 */
+.request-list {
+    margin-top: 20px; /* 上边距 */
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* 垂直排列请求项 */
+    align-items: stretch; /* 使请求项占满父容器的宽度 */
+    width: 100%; /* 容器宽度 100% */
+    max-width: 800px; /* 设置最大宽度以适应大屏幕 */
+    margin-left: auto; /* 自动边距以实现居中 */
+    margin-right: auto; /* 自动边距以实现居中 */
+}
+
+/* 请求项样式 */
+.request-item {
+    background-color: #f9f9f9; /* 记录项背景色 */
+    border: 1px solid #ddd; /* 边框色 */
+    border-radius: 5px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 15px; /* 记录项之间的间距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: transform 0.2s; /* 变换效果 */
+    width: 100%; /* 请求项宽度占满父容器 */
+    text-align: center; /* 请求项内容居中对齐 */
+
+}
+
+.request-item:hover {
+    transform: translateY(-2px); /* 悬停时上移 */
+}
+
+/* 请求项图片样式 */
+.item-image {
+    max-width: 100%; /* 自适应宽度 */
+    height: auto; /* 保持比例 */
+    border-radius: 4px; /* 圆角 */
+}
+
+/* 选择器样式 */
+select {
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 4px; /* 圆角 */
+    margin-top: 10px; /* 上边距 */
+    width: calc(100% - 22px); /* 适应宽度 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column; /* 小屏幕时垂直排列 */
+        height: auto; /* 高度自适应 */
+    }
+
+    .navbar {
+        width: 100%; /* 导航栏宽度自适应 */
+    }
+
+    .content {
+        padding: 10px; /* 减少内边距 */
+    }
+}

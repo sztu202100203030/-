@@ -1,0 +1,105 @@
+/* login.css */
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../images/loginall/login/login_mainbg.jpg'); /* 添加背景图 */
+    background-size: cover; /* 使背景图覆盖整个页面 */
+    background-position: center; /* 背景图居中 */
+    color: #333; /* 字体颜色 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使容器充满整个视口 */
+}
+
+/* 容器样式 */
+.container {
+
+    max-width: 400px; /* 容器最大宽度 */
+    width: 100%; /* 容器宽度 */
+    padding: 20px; /* 内边距 */
+    background-color: rgba(255, 255, 255, 0.8); /* 使背景略透明以适应背景图 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    position: absolute; /* 改为绝对定位 */
+    top: 30px; /* 距离页面顶部的距离 */
+    right: 30px; /* 距离页面右侧的距离 */
+}
+
+/* 内容样式 */
+.content {
+    text-align: center; /* 内容居中 */
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="password"] {
+    width: 90%; /* 输入框宽度 */
+    padding: 12px; /* 内边距 */
+    margin-bottom: 15px; /* 下边距 */
+    border: 1px solid #dcdcdc; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    transition: border-color 0.3s; /* 边框颜色过渡效果 */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #5b9bd5; /* 聚焦时边框颜色 */
+    outline: none; /* 去掉外部轮廓 */
+}
+
+/* 按钮样式 */
+button {
+    width: 100%; /* 按钮宽度 */
+    padding: 12px; /* 内边距 */
+    border: none; /* 去掉边框 */
+    background-color: #5b9bd5; /* 背景颜色 */
+    color: white; /* 字体颜色 */
+    font-size: 16px; /* 字体大小 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针样式 */
+    transition: background-color 0.3s; /* 背景颜色过渡效果 */
+    margin-bottom: 10px; /* 下边距 */
+}
+
+button:hover {
+    background-color: #4a8cbf; /* 悬停时背景颜色 */
+}
+
+/* 按钮组样式 */
+.button-group {
+    display: flex; /* 使用 Flexbox 进行布局 */
+    justify-content: space-between; /* 按钮之间留出间隔 */
+    margin-top: 15px; /* 上边距 */
+}
+
+.button-group button {
+    flex: 1; /* 按钮占据相同的空间 */
+    margin-right: 10px; /* 按钮之间的间隔 */
+}
+
+/* 移除最后一个按钮的右边距 */
+.button-group button:last-child {
+    margin-right: 0; /* 去掉最后一个按钮的右边距 */
+}
+
+/* 角色选择样式 */
+#role-selection {
+    margin-top: 20px; /* 上边距 */
+}
+
+/* 链接样式 */
+button#register-btn,
+button#reset-btn {
+    background-color: transparent; /* 背景透明 */
+    color: #5b9bd5; /* 字体颜色 */
+    text-decoration: underline; /* 下划线 */
+}
+
+button#register-btn:hover,
+button#reset-btn:hover {
+    color: #4a8cbf; /* 悬停时颜色 */
+}

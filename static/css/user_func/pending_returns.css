@@ -1,0 +1,144 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器样式 */
+.wrapper {
+    display: flex; /* 使用 Flexbox 来排列导航栏和内容 */
+    height: 100vh; /* 设置高度为视口高度 */
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #2C3E50; /* 导航栏背景色 */
+    color: white; /* 按钮文字颜色 */
+    width: 200px; /* 设置导航栏宽度 */
+    padding: 20px; /* 添加内边距 */
+    display: flex;
+    flex-direction: column; /* 垂直排列按钮 */
+}
+
+.page-button {
+    background-color: #34495E; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 10px; /* 按钮之间的间距 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    border-radius: 5px; /* 圆角按钮 */
+    transition: background-color 0.3s; /* 背景色变换的过渡效果 */
+}
+
+.page-button:hover {
+    background-color: #1ABC9C; /* 鼠标悬停时的背景色 */
+}
+
+/* 内容区域样式 */
+.content {
+    flex: 1; /* 让内容区域扩展以填充剩余空间 */
+    padding: 20px; /* 添加内边距 */
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+/* 待归还物品列表样式 */
+#pending-returns-list {
+    margin-top: 20px; /* 上边距 */
+}
+
+/* 物品请求样式 */
+.request {
+    background-color: white; /* 请求项背景色 */
+    border: 1px solid #ddd; /* 边框色 */
+    border-radius: 8px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 15px; /* 请求项之间的间距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: transform 0.2s; /* 变换效果 */
+}
+
+.request:hover {
+    transform: translateY(-2px); /* 悬停时上移 */
+}
+
+/* 物品图片样式 */
+.request img {
+    max-width: 100%; /* 图片最大宽度为100% */
+    border-radius: 8px; /* 圆角 */
+    margin-bottom: 10px; /* 图片与文本之间的间距 */
+}
+
+/* 弹窗样式 */
+.modal {
+    position: fixed; /* 固定定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    display: flex;
+    justify-content: center; /* 居中对齐 */
+    align-items: center; /* 垂直居中 */
+}
+
+.modal-content {
+    background-color: white; /* 白色背景 */
+    border-radius: 8px; /* 圆角 */
+    padding: 20px; /* 内边距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    width: 300px; /* 固定宽度 */
+    text-align: center; /* 中心对齐 */
+}
+
+/* 输入框样式 */
+input[type="number"] {
+    width: calc(100% - 20px); /* 设置输入框宽度 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框色 */
+    border-radius: 4px; /* 圆角 */
+    margin-bottom: 15px; /* 与其他元素的间距 */
+}
+
+/* 按钮样式 */
+button {
+    background-color: #3498DB; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 10px 20px; /* 内边距 */
+    border-radius: 4px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    transition: background-color 0.3s; /* 背景色变换的过渡效果 */
+}
+
+button:hover {
+    background-color: #2980B9; /* 悬停时的背景色 */
+}
+
+/* 关闭按钮样式 */
+#cancelReturn, #cancelRenew {
+    background-color: #e74c3c; /* 红色 */
+}
+
+#cancelReturn:hover, #cancelRenew:hover {
+    background-color: #c0392b; /* 悬停时的深红色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column; /* 小屏幕时垂直排列 */
+        height: auto; /* 高度自适应 */
+    }
+
+    .navbar {
+        width: 100%; /* 导航栏宽度自适应 */
+    }
+
+    .content {
+        padding: 10px; /* 减少内边距 */
+    }
+}

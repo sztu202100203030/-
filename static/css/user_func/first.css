@@ -1,0 +1,139 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器样式 */
+.wrapper {
+    display: flex; /* 使用 Flexbox 来排列导航栏和内容 */
+    height: 100vh; /* 设置高度为视口高度 */
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #2C3E50; /* 导航栏背景色 */
+    color: white; /* 按钮文字颜色 */
+    width: 200px; /* 设置导航栏宽度 */
+    padding: 20px; /* 添加内边距 */
+    display: flex;
+    flex-direction: column; /* 垂直排列按钮 */
+}
+
+.page-button {
+    background-color: #34495E; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 10px; /* 按钮之间的间距 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    border-radius: 5px; /* 圆角按钮 */
+    transition: background-color 0.3s; /* 背景色变换的过渡效果 */
+}
+
+.page-button:hover {
+    background-color: #1ABC9C; /* 鼠标悬停时的背景色 */
+}
+
+/* 内容区域样式 */
+.container {
+    flex: 1; /* 占据剩余的宽度 */
+    padding: 20px; /* 添加内边距 */
+    background-color: #ffffff; /* 内容区域背景色 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 下拉选择框样式 */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #5b9bd5;
+    outline: none;
+}
+
+/* 搜索栏样式 */
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #5b9bd5;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #5b9bd5;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #4a8cbf;
+}
+
+/* 物资列表样式 */
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-list div {
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-list div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 物资名称样式 */
+.item-list div::before {
+    content: ''; /* 默认没有图标 */
+    margin-right: 8px; /* 图标与文本之间的间距 */
+}
+
+/* 根据权限显示不同的物资图标 */
+.book {
+    content: '📚'; /* 图书图标 */
+}
+
+.equipment {
+    content: '🔧'; /* 设备图标 */
+}
+
+.consumable {
+    content: '🧪'; /* 耗材图标 */
+}

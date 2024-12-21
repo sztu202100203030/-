@@ -1,0 +1,153 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3f4f6, #e0e7ff); /* 渐变背景 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    height: 100vh; /* 占满整个视口高度 */
+}
+
+h1, h2, h3, p {
+    text-align: center;
+    color: #333;
+
+}
+
+.content {
+    flex: 1; /* 让内容区域扩展以填充剩余空间 */
+    padding: 20px; /* 添加内边距 */
+    overflow-y: auto; /* 允许垂直滚动 */
+    background-color: #ffffff; /* 内容背景色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 内容区阴影效果 */
+    border-radius: 8px; /* 圆角效果 */
+}
+
+/* 确保 wrapper 占满整个视口 */
+.wrapper {
+    display: flex; /* 使用 flexbox 布局 */
+    height: 100vh; /* 占满整个视口高度 */
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #2C3E50; /* 导航栏背景色 */
+    color: white; /* 按钮文字颜色 */
+    width: 250px; /* 设置导航栏宽度 */
+    padding: 20px; /* 添加内边距 */
+    display: flex;
+    flex-direction: column; /* 垂直排列按钮 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    height: 100%; /* 确保高度占满整个父元素 */
+}
+
+/* 主按钮样式 */
+.page-button {
+    background-color: #34495E; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 10px; /* 按钮之间的间距 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    border-radius: 5px; /* 圆角按钮 */
+    transition: background-color 0.3s, transform 0.2s; /* 背景色和变换的过渡效果 */
+}
+
+.page-button:hover {
+    background-color: #1ABC9C; /* 鼠标悬停时的背景色 */
+    transform: scale(1.05); /* 鼠标悬停时放大按钮 */
+}
+
+/* 子菜单样式 */
+.submenu {
+    display: none; /* 默认隐藏子菜单 */
+    padding-left: 20px; /* 给子菜单添加缩进 */
+    margin-bottom: 10px; /* 子菜单与下一个按钮之间的间距 */
+}
+
+/* 子菜单按钮样式 */
+.submenu-button {
+    background-color: transparent; /* 去掉背景色 */
+    color: white; /* 字体颜色 */
+    border: none; /* 去掉边框 */
+    padding: 10px 10px 10px 30px; /* 内边距，左边留出小点的位置 */
+    margin-bottom: 5px; /* 间距 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    border-radius: 0; /* 去掉圆角 */
+    width: 100%; /* 占满宽度 */
+    text-align: left; /* 左对齐文本 */
+    position: relative; /* 为伪元素定位 */
+}
+
+/* 添加小点的样式 */
+.submenu-button::before {
+    content: ''; /* 创建伪元素 */
+    width: 6px; /* 小点宽度 */
+    height: 6px; /* 小点高度 */
+    background-color: white; /* 小点颜色 */
+    border-radius: 50%; /* 圆形 */
+    position: absolute; /* 绝对定位 */
+    left: 10px; /* 距离左边的距离 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 垂直居中 */
+}
+
+/* 鼠标悬停时的背景色 */
+.submenu-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 鼠标悬停时的背景色 */
+}
+
+/* 高亮样式 */
+.submenu-button.active {
+    background: linear-gradient(to right, #3498DB, rgba(52, 152, 219, 0.3)); /* 渐变背景色，左边亮蓝到右边淡蓝 */
+    color: white; /* 高亮文字颜色 */
+}
+
+
+/* 请求列表样式 */
+.request-list {
+    margin-top: 20px; /* 上边距 */
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* 垂直排列请求项 */
+    align-items: stretch; /* 使请求项占满父容器的宽度 */
+    width: 100%; /* 容器宽度 100% */
+    max-width: 800px; /* 设置最大宽度以适应大屏幕 */
+    margin-left: auto; /* 自动边距以实现居中 */
+    margin-right: auto; /* 自动边距以实现居中 */
+}
+
+/* 请求项样式 */
+.request-item {
+    background-color: #f9f9f9; /* 记录项背景色 */
+    border: 1px solid #ddd; /* 边框色 */
+    border-radius: 5px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 15px; /* 记录项之间的间距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: transform 0.2s; /* 变换效果 */
+    width: 100%; /* 请求项宽度占满父容器 */
+    text-align: center; /* 请求项内容居中对齐 */
+
+}
+
+.request-item:hover {
+    transform: translateY(-2px); /* 悬停时上移 */
+}
+
+/* 请求项图片样式 */
+.item-image {
+    max-width: 100%; /* 自适应宽度 */
+    height: auto; /* 保持比例 */
+    border-radius: 4px; /* 圆角 */
+}
+
+/* 选择器样式 */
+select {
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 4px; /* 圆角 */
+    margin-top: 10px; /* 上边距 */
+    width: calc(100% - 22px); /* 适应宽度 */
+}

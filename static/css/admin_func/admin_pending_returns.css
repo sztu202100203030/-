@@ -1,0 +1,72 @@
+/*!* 通用样式 *!*/
+/*body {*/
+/*    font-family: 'Arial', sans-serif;*/
+/*    background-color: #f4f7f9;*/
+/*    color: #333;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+
+
+/*!* 主要内容区样式 *!*/
+/*.content {*/
+/*    flex: 1; !* 让内容区域扩展以填充剩余空间 *!*/
+/*    padding: 20px; !* 添加内边距 *!*/
+/*    overflow-y: auto; !* 允许垂直滚动 *!*/
+/*    background-color: #ffffff; !* 内容背景色 *!*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); !* 内容区阴影效果 *!*/
+/*    border-radius: 8px; !* 圆角效果 *!*/
+/*}*/
+
+/* 请求列表样式 */
+.request-list {
+    margin-top: 20px; /* 上边距 */
+}
+
+/* 请求项样式 */
+.request-item {
+    background-color: #f9f9; /* 记录项背景色 */
+    border: 1px solid #ddffdd; /* 边框色 */
+    border-radius: 5px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 15px; /* 记录项之间的间距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: transform 0.2s; /* 变换效果 */
+}
+
+.request-item:hover {
+    transform: translateY(-20px); /* 悬停时上移 */
+}
+
+/* 请求项图片样式 */
+.item-image-pendingreturn {
+    max-width: 360px; /* 自适应宽度 */
+    height: auto; /* 保持比例 */
+    border-radius: 4px; /* 圆角 */
+}
+
+/* 选择器样式 */
+#privilege-selector {
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 4px; /* 圆角 */
+    margin-top: 10px; /* 上边距 */
+    width: calc(100% - 22px); /* 适应宽度 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column; /* 小屏幕时垂直排列 */
+        height: auto; /* 高度自适应 */
+    }
+
+    .navbar {
+        width: 100%; /* 导航栏宽度自适应 */
+    }
+
+    .content {
+        padding: 10px; /* 减少内边距 */
+    }
+}

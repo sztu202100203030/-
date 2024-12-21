@@ -1,0 +1,52 @@
+
+
+/*!* 通用样式 *!*/
+/*body {*/
+/*    font-family: 'Arial', sans-serif;*/
+/*    background-color: #f4f7f9;*/
+/*    color: #333;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/* 输入组样式 */
+.input-group {
+    margin-bottom: 15px; /* 输入组底部外边距 */
+}
+
+/* 标签样式 */
+label {
+    display: block; /* 标签为块级元素，独占一行 */
+    margin-bottom: 5px; /* 标签底部外边距 */
+    font-weight: bold; /* 标签文字加粗 */
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%; /* 输入框和下拉选择框宽度占满父元素 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 圆角边框 */
+    font-size: 16px; /* 字体大小 */
+}
+
+/* 输入框聚焦时的样式 */
+input:focus,
+select:focus {
+    border-color: #007bff; /* 聚焦时边框颜色 */
+    outline: none; /* 去除默认的聚焦轮廓 */
+}
+
+/* 特有字段的显示样式 */
+.input-group input[type="text"]:disabled {
+    background-color: #e9ecef; /* 禁用状态下的背景色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* 在小屏幕下调整容器内边距 */
+    }
+}

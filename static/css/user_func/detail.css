@@ -1,0 +1,103 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 显示物资信息 */
+.item-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.item-info p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#itemImage {
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#itemDescription {
+    position: relative;
+    padding-bottom: 10px; /* 留出空间给链接 */
+}
+
+/* “查看完整描述”链接样式 */
+#itemDescription a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#itemDescription a:hover {
+    text-decoration: underline;
+}
+
+/* 借用物资的输入框和按钮 */
+#borrowButtonContainer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+input[type="number"] {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 10px; /* 为手机端的输入框添加间距 */
+    }
+
+    button {
+        width: 100%; /* 按钮在小屏幕上全宽 */
+    }
+}

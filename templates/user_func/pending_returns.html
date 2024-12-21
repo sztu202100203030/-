@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待归还物品</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_func/pending_returns.css') }}">
+</head>
+<body>
+   <div class="wrapper">
+        <!-- 导航栏 -->
+        <div class="navbar">
+            <button class="page-button" data-page="first">实验物资</button>
+            <button class="page-button" data-page="pending_returns">待归还物品</button>
+            <button class="page-button" data-page="approval_status">审批进度</button>
+            <button class="page-button" data-page="history_requests">历史借用记录</button>
+        </div>
+
+        <!-- 页面主体内容 -->
+        <div class="content">
+            <div id="pending-returns-list">
+                <!-- 动态生成待归还物品 -->
+            </div>
+
+            <!-- 预约归还弹窗 -->
+            <div id="return-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <input placeholder="归还数量" type="number" id="returnQuantity">
+                    <button id="submitReturn">确认预约归还</button>
+                    <button id="cancelReturn">取消</button>
+                </div>
+            </div>
+
+            <!--
+            <div id="renew-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <input placeholder="续借天数" type="number" id="renewDays">
+                    <button id="submitRenew">确认预约续借</button>
+                    <button id="cancelRenew">取消</button>
+                </div>
+            </div>预约续借弹窗 -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/user_func/pending_returns.js') }}"></script>
+</body>
+</html>

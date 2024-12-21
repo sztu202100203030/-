@@ -1,0 +1,111 @@
+{#<!DOCTYPE html>#}
+{#<html lang="zh">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>添加物资</title>#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/add_item.css') }}">#}
+{#</head>#}
+{#<body>#}
+{#<div class="container">#}
+    <div id="privilege-selector-container">
+        <label for="privilege-selector">当前选择:</label>
+        <select id="privilege-selectors">
+            <option value="图书">图书</option>
+            <option value="设备">设备</option>
+            <option value="耗材">耗材</option>
+        </select>
+    </div>
+    <form id="add-item-form">
+        <div class="input-group">
+            <label for="item-name">物资名称</label>
+            <input type="text" id="item-name" name="name" required />
+        </div>
+        <div class="input-group">
+            <label for="item-type">类型</label>
+            <input type="text" id="item-type" name="type" required />
+        </div>
+        <div class="input-group">
+            <label for="item-status">状态</label>
+            <input type="text" id="item-status" name="status" required />
+        </div>
+        <div class="input-group">
+            <label for="item-quantity">数量</label>
+            <input type="number" id="item-quantity" name="quantity" required />
+        </div>
+        <div class="input-group">
+            <label for="item-image-url">图片 URL</label>
+            <input type="text" id="item-image-url" name="image_url" required />
+        </div>
+
+        <!-- 图书特有字段 -->
+        <div class="input-group book-fields" style="display: none;">
+            <label for="author">作者</label>
+            <input type="text" id="author" name="author" />
+        </div>
+        <div class="input-group book-fields" style="display: none;">
+            <label for="summary">简介</label>
+            <input type="text" id="summary" name="summary" />
+        </div>
+        <div class="input-group book-fields" style="display: none;">
+            <label for="publisher">出版社</label>
+            <input type="text" id="publisher" name="publisher" />
+        </div>
+        <div class="input-group book-fields" style="display: none;">
+            <label for="publication-date">出版日期</label>
+            <input type="date" id="publication-date" name="publication_date" />
+        </div>
+        <div class="input-group book-fields" style="display: none;">
+            <label for="edition">版次</label>
+            <input type="text" id="edition" name="edition" />
+        </div>
+        <div class="input-group book-fields" style="display: none;">
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" name="isbn" />
+        </div>
+
+        <!-- 设备特有字段 -->
+        <div class="input-group equipment-fields" style="display: none;">
+            <label for="manufacturer">制造商</label>
+            <input type="text" id="manufacturer" name="manufacturer" />
+        </div>
+        <div class="input-group equipment-fields" style="display: none;">
+            <label for="model">型号</label>
+            <input type="text" id="model" name="model" />
+        </div>
+        <div class="input-group equipment-fields" style="display: none;">
+            <label for="serial-number">序列号</label>
+            <input type="text" id="serial-number" name="serial_number" />
+        </div>
+        <div class="input-group equipment-fields" style="display: none;">
+            <label for="purchase-date">购买日期</label>
+            <input type="date" id="purchase-date" name="purchase_date" />
+        </div>
+        <div class="input-group equipment-fields" style="display: none;">
+            <label for="warranty-expiry">保修到期</label>
+            <input type="date" id="warranty-expiry" name="warranty_expiry" />
+        </div>
+
+        <!-- 耗材特有字段 -->
+        <div class="input-group consumables-fields" style="display: none;">
+            <label for="manufacturer-consumable">制造商</label>
+            <input type="text" id="manufacturer-consumable" name="manufacturer" />
+        </div>
+        <div class="input-group consumables-fields" style="display: none;">
+            <label for="expiration-date">到期日期</label>
+            <input type="date" id="expiration-date" name="expiration_date" />
+        </div>
+        <div class="input-group consumables-fields" style="display: none;">
+            <label for="unit">单位</label>
+            <input type="text" id="unit" name="unit" />
+        </div>
+
+        <button type="submit">提交</button>
+    </form>
+{#</div>#}
+{##}
+{#<script src="{{ url_for('static', filename='js/api.js') }}"></script>#}
+{#<script src="{{ url_for('static', filename='js/admin_func/add_item.js') }}"></script>#}
+{#<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>#}
+{#</body>#}
+{#</html>#}

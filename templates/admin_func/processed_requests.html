@@ -1,0 +1,31 @@
+{#<!DOCTYPE html>#}
+{#<html lang="zh-CN">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>已处理请求</title>#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/processed_requests.css') }}">#}
+{#</head>#}
+{#<body>#}
+{#    <main class="content" id="content-area">#}
+        <h1>已处理借出预约请求</h1>
+        <!-- 超级管理员权限选择器 -->
+        <div id="privilege-selector" style="display: none;">
+            <label for="privilege-select">选择权限：</label>
+            <select id="privilege-select"> <!-- 确保这里的 id 是唯一的 -->
+                <option value="图书">图书</option>
+                <option value="设备">设备</option>
+                <option value="耗材">耗材</option>
+            </select>
+        </div>
+
+        <!-- 请求列表 -->
+        <div id="request-list" class="request-list"></div>
+{#    </main>#}
+{##}
+{#    <script src="{{ url_for('static', filename='js/api.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='js/admin_func/processed_requests.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>#}
+{##}
+{#</body>#}
+{#</html>#}

@@ -1,0 +1,138 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 物资详情样式 */
+.item-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#item-image {
+    max-width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.item-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* 按钮样式 */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#borrow-button {
+    background-color: #28a745;
+    color: white;
+}
+
+#borrow-button:hover {
+    background-color: #218838;
+}
+
+#return-button {
+    background-color: #007bff;
+    color: white;
+}
+
+#return-button:hover {
+    background-color: #0056b3;
+}
+
+/* 借出和归还部分样式 */
+#borrow-section, #return-section {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none; /* 默认隐藏 */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="number"], input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* 归还记录样式 */
+#return-records {
+    margin-top: 10px;
+}
+
+#record-list {
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#record-list div {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#record-list div:hover {
+    background-color: #f1f1f1;
+}
+
+/* 归还输入框样式 */
+#return-inputs {
+    display: none; /* 默认隐藏 */
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}

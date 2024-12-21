@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物资详情</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user_func/detail.css') }}">
+    <style>
+        /* 模态框的基本样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed; /* 固定定位 */
+            z-index: 1; /* 确保模态框在最上层 */
+            left: 0;
+            top: 0;
+            width: 100%; /* 全屏宽 */
+            height: 100%; /* 全屏高 */
+            overflow: auto; /* 如果需要，启用滚动 */
+            background-color: rgb(0,0,0); /* 背景颜色 */
+            background-color: rgba(0,0,0,0.4); /* 背景透明度 */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 上边距和居中 */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* 宽度 */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 显示物资信息 -->
+        <div class="item-info">
+            <p id="itemName"></p>
+            <img id="itemImage" alt="物资图片" style="max-width: 200px;" />
+            <p id="itemDescription"></p>
+            <p id="itemStatus"></p>
+        </div>
+
+        <!-- 借用物资的输入框和按钮 -->
+        <div id="borrowButtonContainer" style="display:none;">
+            <input type="number" id="quantityInput" placeholder="借用数量">
+            <input type="number" id="durationInput" placeholder="借用天数">
+            <button id="borrowButton">预约借用</button>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="descriptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p></p>
+        </div>
+    </div>
+
+    <!-- 引入api.js和detail.js -->
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/user_func/detail.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>待交接出库物资</title>#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/pending_exchanges.css') }}">#}
+{#</head>#}
+{#<body>#}
+{#    <main class="content" id="content-area">#}
+        <h1>待交接物资出库</h1>
+        <!-- 权限选择器，仅超级管理员可见 -->
+        <select id="privilege-selector" style="display:none;">
+            <option value="图书">图书</option>
+            <option value="设备">设备</option>
+            <option value="耗材">耗材</option>
+        </select>
+
+        <!-- 待交接物资列表 -->
+        <div id="exchange-list"></div>
+{#    </main>#}
+{##}
+{#    <script src="{{ url_for('static', filename='js/api.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='js/admin_func/pending_exchanges.js') }}"></script>#}
+{#    <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>#}
+{#</body>#}
+{#</html>#}

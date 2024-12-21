@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物资详情</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_func/offline_handover_detail.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="item-detail" id="item-detail">
+        <img id="item-image" alt="物资图像" />
+        <div class="item-info">
+            <h2 id="item-name"></h2>
+            <p id="item-description"></p>
+            <p id="item-quantity"></p>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <button id="back-button">返回</button>
+        <button id="borrow-button">借出</button>
+        <button id="return-button">归还</button>
+    </div>
+
+    <div id="borrow-section" style="display: none;">
+        <label>借出数量:</label>
+        <input type="number" id="borrow-quantity" value="1" />
+        <label>借用地点:</label>
+        <input id="borrow-location" value="大数据院楼211" />
+        <label>借用时长(天):</label>
+        <input type="number" id="borrow-duration" value="1" />
+        <label>借用人姓名:</label>
+        <input id="borrow-person-name" />
+        <button id="confirm-borrow">确认借出</button>
+    </div>
+
+    <div id="return-section" style="display: none;">
+        <label>归还人姓名:</label>
+        <input id="return-person-name" />
+        <button id="search-return-records">查询借用记录</button>
+
+        <div id="return-records" style="display: none;">
+            <label>请选择要归还的记录:</label>
+            <div id="record-list"></div>
+        </div>
+
+        <div id="return-inputs" style="display: none;">
+            <label>归还数量:</label>
+            <input type="number" id="return-quantity" value="1" />
+            <label>归还地点:</label>
+            <input id="return-location" value="大数据院楼211" />
+            <label>物资损耗情况:</label>
+            <input id="item-condition" />
+            <button id="confirm-return">确认归还</button>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/api.js') }}"></script>
+<script src="{{ url_for('static', filename='js/admin_func/offline_handover_detail.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+</body>
+</html>

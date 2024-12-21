@@ -1,0 +1,166 @@
+/*select {*/
+/*    width: 100%; !* 输入框和下拉选择框宽度占满父元素 *!*/
+/*    padding: 10px; !* 内边距 *!*/
+/*    border: 1px solid #ccc; !* 边框样式 *!*/
+/*    border-radius: 4px; !* 圆角边框 *!*/
+/*    font-size: 16px; !* 字体大小 *!*/
+/*}*/
+/* 整体页面样式 */
+
+/*!* 容器样式 *!*/
+/*#privilege-selector-container-import {*/
+/*    background: white; !* 背景白色 *!*/
+/*    border-radius: 12px; !* 圆角 *!*/
+/*    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); !* 阴影效果 *!*/
+/*    padding: 30px; !* 内边距 *!*/
+/*    width: 400px; !* 固定宽度 *!*/
+/*    text-align: center; !* 内容居中 *!*/
+/*}*/
+
+/*!* 标签样式 *!*/
+/*label {*/
+/*    font-size: 18px; !* 字体大小 *!*/
+/*    margin-bottom: 15px; !* 底部外边距 *!*/
+/*    color: #4a4a4a; !* 标签颜色 *!*/
+/*}*/
+
+/*!* 选择框样式 *!*/
+/*#privilege-selecto-import {*/
+/*    width: 100%; !* 宽度占满 *!*/
+/*    padding: 10px; !* 内边距 *!*/
+/*    border: 1px solid #007bff; !* 边框颜色 *!*/
+/*    border-radius: 5px; !* 圆角 *!*/
+/*    font-size: 16px; !* 字体大小 *!*/
+/*    background-color: #f8f9fa; !* 背景颜色 *!*/
+/*    transition: border-color 0.3s; !* 边框颜色变化过渡 *!*/
+/*}*/
+
+/*#privilege-selector-import:hover,*/
+/*#privilege-selector-import:focus {*/
+/*    border-color: #0056b3; !* 鼠标悬停或聚焦时的边框颜色 *!*/
+/*}*/
+
+/*!* 选择框样式 *!*/
+/*select {*/
+/*    width: 100%; !* 输入框和下拉选择框宽度占满父元素 *!*/
+/*    padding: 10px; !* 内边距 *!*/
+/*    border: 1px solid #ccc; !* 边框样式 *!*/
+/*    border-radius: 4px; !* 圆角边框 *!*/
+/*    font-size: 16px; !* 字体大小 *!*/
+/*}*/
+/*!* 按钮样式 *!*/
+/*#choose-file-button-import {*/
+/*    background-color: #007bff; !* 按钮背景色 *!*/
+/*    color: rosybrown; !* 按钮文字颜色 *!*/
+/*    border: none; !* 去掉边框 *!*/
+/*    border-radius: 5px; !* 圆角 *!*/
+/*    padding: 10px 20px; !* 内边距 *!*/
+/*    font-size: 16px; !* 字体大小 *!*/
+/*    cursor: pointer; !* 鼠标悬停显示手型 *!*/
+/*    transition: background-color 0.3s, transform 0.2s; !* 过渡效果 *!*/
+/*    margin-top: 15px; !* 上外边距 *!*/
+/*}*/
+
+/*#choose-file-button-import:hover {*/
+/*    background-color: #0056b3; !* 鼠标悬停时的背景色 *!*/
+/*    transform: translateY(-2px); !* 悬停时上移 *!*/
+/*}*/
+
+/*!* 文件信息样式 *!*/
+/*#file-info {*/
+/*    margin-top: 15px; !* 上外边距 *!*/
+/*    font-size: 16px; !* 字体大小 *!*/
+/*    color: #6c757d; !* 文件信息颜色 *!*/
+/*}*/
+
+/*!* 隐藏的文件输入框 *!*/
+/*#file-input {*/
+/*    display: none; !* 隐藏文件输入框 *!*/
+/*}*/
+
+/*!* 响应式设计 *!*/
+/*@media (max-width: 600px) {*/
+/*    #privilege-selector-container {*/
+/*        width: 90%; !* 在小屏幕上宽度占满 *!*/
+/*        padding: 20px; !* 内边距 *!*/
+/*    }*/
+/*}*/
+/* 容器样式 */
+#privilege-selector-container-import {
+    background: white; /* 背景白色 */
+    border-radius: 12px; /* 圆角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    padding: 30px; /* 内边距 */
+    width: 400px; /* 固定宽度 */
+    text-align: center; /* 内容居中 */
+}
+
+/* 标签样式 */
+#privilege-selector-container-import label {
+    font-size: 18px; /* 字体大小 */
+    margin-bottom: 15px; /* 底部外边距 */
+    color: #4a4a4a; /* 标签颜色 */
+}
+/* 选择框样式 */
+select {
+    width: 100%; /* 输入框和下拉选择框宽度占满父元素 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 圆角边框 */
+    font-size: 16px; /* 字体大小 */
+}
+/* 选择框样式 */
+#privilege-selector-import {
+    width: 100%; /* 宽度占满 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #007bff; /* 边框颜色 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    background-color: #f8f9fa; /* 背景颜色 */
+    transition: border-color 0.3s; /* 边框颜色变化过渡 */
+}
+
+#privilege-selector-import:hover,
+#privilege-selector-import:focus {
+    border-color: #1ABC9C; /* 鼠标悬停或聚焦时的边框颜色 */
+}
+
+/* 选择文件按钮样式 */
+#choose-file-button-import,
+#upload-button {
+    background-color: #1ABC9C; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 10px 20px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    transition: background-color 0.3s, transform 0.2s; /* 过渡效果 */
+    margin-top: 15px; /* 上外边距 */
+}
+
+#choose-file-button:hover,
+#upload-button:hover {
+    background-color: #1ABC9C; /* 鼠标悬停时的背景色 */
+    transform: translateY(-2px); /* 悬停时上移 */
+}
+
+/* 文件信息样式 */
+#file-info {
+    margin-top: 15px; /* 上外边距 */
+    font-size: 16px; /* 字体大小 */
+    color: #6c757d; /* 文件信息颜色 */
+}
+
+/* 隐藏的文件输入框 */
+#file-input {
+    display: none; /* 隐藏文件输入框 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    #privilege-selector-container {
+        width: 90%; /* 在小屏幕上宽度占满 */
+        padding: 20px; /* 内边距 */
+    }
+}
