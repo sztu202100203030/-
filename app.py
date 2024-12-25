@@ -30,8 +30,8 @@ def create_db_connection():
         connection = mysql.connector.connect(
             host='127.0.0.1',
             user='root',
-            password='Sztu@Ckl1034',
-            database='lab_inventory'
+            password='输入你自己的密码',
+            database='你自己的库名'
         )
         return connection
     except Error as e:
